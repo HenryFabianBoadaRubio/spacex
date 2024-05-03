@@ -62,7 +62,28 @@ body{
     gap: 10px;
     margin: 0 var(--layout-description-container-x);
     margin-bottom: var(--layout-description-container-y);
+    flex-direction: column;
 }
+
+/*COMIENZO SEPARACION CONTAINERS*/
+.description__container__box2 img,
+.description__container__box3 img,
+.description__container__box1 img{
+    display: flex;
+    object-fit: contain;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 3rem;
+    border: 1px solid red;
+    
+
+}
+/* .description__container img {
+    display: flex;
+    object-fit: contain;
+    width: 20rem;
+    height: 20rem;
+} */
 
 .main__section {
     /* background: green; */
