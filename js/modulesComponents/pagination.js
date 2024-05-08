@@ -5,16 +5,16 @@ import {
 import { 
     nameRockets 
 } from "./title.js";
-import { 
-    informationRockets,
-    informationLaunchCostRocket,
-    informationFirstFlightRocket,
-    informationWebRocket
-} from "./information.js";
+
 import { 
     tableRocketColum1, 
     tableRocketColum2
 } from "./tables.js";
+
+import{
+    rocketsmodel
+} from "./rokectsIzquierda.js"
+
 import { 
     informRocketEngineThrustSeaLevel, 
     informRocketEngineThrustVacuum
@@ -118,11 +118,10 @@ const getRocketsId = async(e)=>{
     let Rocket = await getAllRocketsId(e.target.id);
     await clear();
     
-    await informationRockets(Rocket.country, Rocket.description)
+    
     await nameRockets(Rocket.name)
-    await informationLaunchCostRocket(Rocket.cost_per_launch)
-    await informationFirstFlightRocket(Rocket.first_flight)
-    await informationWebRocket(Rocket.wikipedia)
+    
+    description__item.append(...rocketsmodel(Rocket))
 
     await informRocketEngineThrustSeaLevel(Rocket.engines.thrust_sea_level);
     await informRocketEngineThrustVacuum(Rocket.engines.thrust_vacuum);
@@ -153,7 +152,7 @@ export const paginationRockets = async()=>{
     });
     
     let [a1,a2,a3,a4] = div.children
-    a3.click();
+    a1.click();
     // <div class="buttom__paginacion">
     //     <a href="#">&laquo;</a> 
     //     <a href="#" class="activo">1</a>
