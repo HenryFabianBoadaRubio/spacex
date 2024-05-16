@@ -9,7 +9,10 @@
 }
 
 body {
-    background: linear-gradient(var(--color--one), var(--color--one--rgba));
+    background: url(https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZzVqY243azNmMzVsdWg2bnh0emlpb3JxbXJqcXk3YXg1M2tpNnhlYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9bTjZrytydVRK/giphy.gif);
+    /* background-repeat: no-repeat; */
+    background-size:cover;
+    /* background: linear-gradient(var(--color--one), var(--color--one--rgba)); */
 }
 
 *::-webkit-scrollbar {
@@ -489,4 +492,22 @@ progress[value]::-webkit-progress-value {
 progress[value]::-moz-progress-bar {
     border-radius: 10em;
     background: var(--color);
+}
+
+
+
+/**estilo web */
+.box1__container{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    height: 25rem;
+    border: 1px solid red;
+    line-height: 2rem;
+    padding: 0.3rem;
+}
+.box1__container h1{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
 }
