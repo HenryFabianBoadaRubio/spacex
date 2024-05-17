@@ -511,3 +511,12 @@ progress[value]::-moz-progress-bar {
     /* align-items: center; */
     justify-content: center;
 }
+
+
+
+/*ICONOS DEL FOOTER */
+
+#company i {
+    font-size: 32px; /* Ajusta este valor según el tamaño deseado */
+}
+
