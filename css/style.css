@@ -116,8 +116,8 @@ body {
     width: 20rem;
     height: 20rem;
     border-radius: 3rem;
-    border: 1px solid red;
-    
+    /* border: 1px solid red; */
+   
 
 }
 /* .description__container img {
@@ -184,8 +184,10 @@ body {
 /*  */
 .section__information__container {
     /* background: #d9ff00; */
+    position: relative;
     grid-area: section__main;
     display: grid;
+    /* border: 1px solid red; */
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
         "colum__1 colum__2 colum__3";
@@ -257,8 +259,11 @@ body {
     /* background: orange; */
     grid-area: colum__2;
     display: flex;
+    height: 15rem;
     overflow-x: auto;
     align-items: center;
+   margin-top: 16rem;
+    /* position: absolute; */
 }
 
 .section__image>.carousel__item {
@@ -502,7 +507,7 @@ progress[value]::-moz-progress-bar {
     flex-direction: column;
     color: white;
     height: 25rem;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     line-height: 2rem;
     padding: 0.3rem;
 }
@@ -512,7 +517,13 @@ progress[value]::-moz-progress-bar {
     justify-content: center;
 }
 
-
+.alien{
+    display: flex;
+    position: absolute;
+    /* border: 1px solid red; */
+    margin-right: 50rem;
+    margin-left: 47rem;
+}
 
 /*ICONOS DEL FOOTER */
 
