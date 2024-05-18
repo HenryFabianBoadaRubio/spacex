@@ -25,7 +25,7 @@ export const getAllCapsulesId = async (capsulesId)=>{
 export const informationOfTheCapsules = async (Capsule) =>{
 
     let centerCapculesLeft = document.querySelector("#sucess_rate")
-    console.log("hola");
+   
     centerCapculesLeft.innerHTML = /*html*/ `
         <style>
         body {
@@ -70,8 +70,6 @@ export const informationOfTheCapsules = async (Capsule) =>{
             </tr>
             <tr>
             <td><b>Id: </b>${Capsule.id}</td>
-
-
 
             </tr>
         </tbody>

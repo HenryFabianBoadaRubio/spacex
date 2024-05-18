@@ -3,7 +3,8 @@ import {
     getAllRocketsId
 } from "../modules/rockets.js";
 import { 
-    nameRockets 
+    nameRockets ,
+    nameCores
 } from "./title.js";
 
 import { 
@@ -45,7 +46,9 @@ import {
 
 import{
     getAllCores,
-    getAllCoresId
+    getAllCoresId,
+    informationOfCores,
+
 } from "../modules/cores.js"
 
  import{
@@ -188,6 +191,9 @@ const getRocketsId = async(e)=>{
     
     
     await nameRockets(Rocket.name)
+    
+    
+   
     
     description__item.append(...rocketsmodel(Rocket))
 
@@ -332,6 +338,9 @@ const getCoresId = async(e)=>{
 
     let cores = await getAllCoresId(e.target.id);
     console.log(cores);
+    await clear()
+    await nameCores(cores.serial)
+    await informationOfCores (cores)
 
     // await informationRockets(Rocket.country, Rocket.description)
     
