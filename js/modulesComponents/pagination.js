@@ -59,6 +59,10 @@ import{
     getAllHistory,
     getAllHistoryId
 } from "../modules/history.js"
+import {
+     getAllLandspads,
+     getAllLandspadsId
+ } from "../modules/landspads.js";
 
 
 
@@ -259,69 +263,12 @@ export const paginationCapsules = async(page=1, limit=4)=>{
 }
 
 //modulo company 
-const getCompanyId = async(e)=>{
-    e.preventDefault();
-    if(e.target.dataset.page){
-        let paginacion = document.querySelector("#paginacion");
-        paginacion.innerHTML = ""
-        paginacion.append(await paginationCapsules(Number(e.target.dataset.page)))
-    }
-    let a = e.target.parentElement.children;
-    for(let val of a){
-        val.classList.remove('activo');
-    }
-    e.target.classList.add('activo');
-    
+export const getCompany = async () => {
+    let res = await fetch("https://api.spacexdata.com/v4/company");
+    let data = await res.json();
+    return data;
+  };
 
-    let company = await getAllCompanyId(e.target.id);
-    console.log(company);
-
-    // await informationRockets(Rocket.country, Rocket.description)
-    
-}
-
-export const paginationCompany = async(page=1, limit=4)=>{  
-     
-    let {docs, pagingCounter, totalPages, nextPage} = await getAllCompany(page, limit)
-
-    let div = document.createElement("div");
-    div.classList.add("buttom__paginacion")
-
-    
-    let start = document.createElement("a");
-    start.setAttribute("href","#");
-    start.innerHTML = "&laquo";
-    start.setAttribute("data-page", (page==1) ? totalPages : page-1)
-    start.addEventListener("click", getCompanyId)
-    div.appendChild(start);
-    docs.forEach((val,id) => {
-        let a = document.createElement("a");
-        a.setAttribute("href","#");
-        a.id = val.id;
-        a.textContent = pagingCounter;
-        a.addEventListener("click", getCompanyId)
-        div.appendChild(a);
-        pagingCounter++
-    });
-    let end = document.createElement("a");
-    end.setAttribute("href","#");
-    end.innerHTML = "&raquo;";
-    end.setAttribute("data-page", (page && nextPage) ? page+1 : 1)
-    end.addEventListener("click", getCompanyId)
-    div.appendChild(end);
-    console.log(div);
-    let [back, a1,a2,a3,a4, next] = div.children
-    a1.click();
-    // <div class="buttom__paginacion">
-    //     <a href="#">&laquo;</a> 
-    //     <a href="#" class="activo">1</a>
-    //     <a href="#">2</a>
-    //     <a href="#">3</a>
-    //     <a href="#">4</a>
-    //     <a href="#">&raquo;</a>
-    // </div>
-    return div;
-}
 
 
 
@@ -575,6 +522,72 @@ export const paginationHistory = async(page=1, limit=4)=>{
     end.innerHTML = "&raquo;";
     end.setAttribute("data-page", (page && nextPage) ? page+1 : 1)
     end.addEventListener("click", getHistoryId)
+    div.appendChild(end);
+    console.log(div);
+    let [back, a1,a2,a3,a4, next] = div.children
+    a1.click();
+    // <div class="buttom__paginacion">
+    //     <a href="#">&laquo;</a> 
+    //     <a href="#" class="activo">1</a>
+    //     <a href="#">2</a>
+    //     <a href="#">3</a>
+    //     <a href="#">4</a>
+    //     <a href="#">&raquo;</a>
+    // </div>
+    return div;
+}
+
+
+//modulo landspads
+const getLandspadsId = async(e)=>{
+    e.preventDefault();
+    if(e.target.dataset.page){
+        let paginacion = document.querySelector("#paginacion");
+        paginacion.innerHTML = ""
+        paginacion.append(await paginationLandspads(Number(e.target.dataset.page)))
+    }
+    let a = e.target.parentElement.children;
+    for(let val of a){
+        val.classList.remove('activo');
+    }
+    e.target.classList.add('activo');
+    
+
+    let landspads = await getAllLandspadsId(e.target.id);
+    console.log(landspads);
+
+    // await informationRockets(Rocket.country, Rocket.description)
+    
+}
+
+export const paginationLandspads = async(page=1, limit=4)=>{  
+     
+    let {docs, pagingCounter, totalPages, nextPage} = await getAllLandspads(page, limit)
+
+    let div = document.createElement("div");
+    div.classList.add("buttom__paginacion")
+
+    
+    let start = document.createElement("a");
+    start.setAttribute("href","#");
+    start.innerHTML = "&laquo";
+    start.setAttribute("data-page", (page==1) ? totalPages : page-1)
+    start.addEventListener("click", getLandspadsId)
+    div.appendChild(start);
+    docs.forEach((val,id) => {
+        let a = document.createElement("a");
+        a.setAttribute("href","#");
+        a.id = val.id;
+        a.textContent = pagingCounter;
+        a.addEventListener("click", getLandspadsId)
+        div.appendChild(a);
+        pagingCounter++
+    });
+    let end = document.createElement("a");
+    end.setAttribute("href","#");
+    end.innerHTML = "&raquo;";
+    end.setAttribute("data-page", (page && nextPage) ? page+1 : 1)
+    end.addEventListener("click", getLandspadsId)
     div.appendChild(end);
     console.log(div);
     let [back, a1,a2,a3,a4, next] = div.children

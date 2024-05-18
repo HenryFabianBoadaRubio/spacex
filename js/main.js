@@ -2,12 +2,12 @@ import {
     load,
     paginationCapsules,
     paginationRockets,
-
-    paginationCompany,
     paginationCores,
     paginationCrew,
     paginationDragons,
-    paginationHistory 
+    paginationHistory,
+    paginationLandspads,
+    getCompany
 } from "./modulesComponents/pagination.js";
 
 let footerSelect = async(e, id)=>{
@@ -46,7 +46,7 @@ company.addEventListener("click", async(e)=>{
     await footerSelect(e, company)
     let paginacion = document.querySelector("#paginacion");
     paginacion.innerHTML = ""
-    paginacion.append(await paginationCompany())
+    await getCompany()
 })
 
 let cores = document.querySelector("#cores")
@@ -76,6 +76,13 @@ history.addEventListener("click", async(e)=>{
     let paginacion = document.querySelector("#paginacion");
     paginacion.innerHTML = ""
     paginacion.append(await paginationHistory())
+})
+let landspads = document.querySelector("#landspads")
+landspads.addEventListener("click", async(e)=>{
+    await footerSelect(e, landspads)
+    let paginacion = document.querySelector("#paginacion");
+    paginacion.innerHTML = ""
+    paginacion.append(await paginationLandspads())
 })
 
 rocket.click();
