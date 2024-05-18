@@ -48,7 +48,7 @@ company.addEventListener("click", async(e)=>{
 
 let cores = document.querySelector("#cores")
 cores.addEventListener("click", async(e)=>{
-    await footerSelect(e, company)
+    await footerSelect(e, cores)
     let paginacion = document.querySelector("#paginacion");
     paginacion.innerHTML = ""
     paginacion.append(await paginationCores())

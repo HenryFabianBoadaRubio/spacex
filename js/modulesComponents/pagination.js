@@ -39,6 +39,12 @@ import {
     getAllCompany,
     getAllCompanyId
 } from "../modules/company.js"
+
+import{
+    getAllCores,
+    getAllCoresId
+} from "../modules/cores.js"
+
 export const load = async()=>{
     let header__title = document.querySelector("#header__title");
     header__title.innerHTML = `
@@ -247,7 +253,7 @@ const getCompanyId = async(e)=>{
     e.target.classList.add('activo');
     
 
-    let company = await getCompanyId(e.target.id);
+    let company = await getAllCompanyId(e.target.id);
     console.log(company);
 
     // await informationRockets(Rocket.country, Rocket.description)
@@ -282,6 +288,74 @@ export const paginationCompany = async(page=1, limit=4)=>{
     end.innerHTML = "&raquo;";
     end.setAttribute("data-page", (page && nextPage) ? page+1 : 1)
     end.addEventListener("click", getCompanyId)
+    div.appendChild(end);
+    console.log(div);
+    let [back, a1,a2,a3,a4, next] = div.children
+    a1.click();
+    // <div class="buttom__paginacion">
+    //     <a href="#">&laquo;</a> 
+    //     <a href="#" class="activo">1</a>
+    //     <a href="#">2</a>
+    //     <a href="#">3</a>
+    //     <a href="#">4</a>
+    //     <a href="#">&raquo;</a>
+    // </div>
+    return div;
+}
+
+
+
+
+//modulo cores
+const getCoresId = async(e)=>{
+    e.preventDefault();
+    if(e.target.dataset.page){
+        let paginacion = document.querySelector("#paginacion");
+        paginacion.innerHTML = ""
+        paginacion.append(await paginationCores(Number(e.target.dataset.page)))
+    }
+    let a = e.target.parentElement.children;
+    for(let val of a){
+        val.classList.remove('activo');
+    }
+    e.target.classList.add('activo');
+    
+
+    let cores = await getAllCoresId(e.target.id);
+    console.log(cores);
+
+    // await informationRockets(Rocket.country, Rocket.description)
+    
+}
+
+export const paginationCores = async(page=1, limit=4)=>{  
+     
+    let {docs, pagingCounter, totalPages, nextPage} = await getAllCores(page, limit)
+
+    let div = document.createElement("div");
+    div.classList.add("buttom__paginacion")
+
+    
+    let start = document.createElement("a");
+    start.setAttribute("href","#");
+    start.innerHTML = "&laquo";
+    start.setAttribute("data-page", (page==1) ? totalPages : page-1)
+    start.addEventListener("click", getCoresId)
+    div.appendChild(start);
+    docs.forEach((val,id) => {
+        let a = document.createElement("a");
+        a.setAttribute("href","#");
+        a.id = val.id;
+        a.textContent = pagingCounter;
+        a.addEventListener("click", getCoresId)
+        div.appendChild(a);
+        pagingCounter++
+    });
+    let end = document.createElement("a");
+    end.setAttribute("href","#");
+    end.innerHTML = "&raquo;";
+    end.setAttribute("data-page", (page && nextPage) ? page+1 : 1)
+    end.addEventListener("click", getCoresId)
     div.appendChild(end);
     console.log(div);
     let [back, a1,a2,a3,a4, next] = div.children
