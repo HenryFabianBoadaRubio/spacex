@@ -9,7 +9,8 @@ import {
     paginationLandspads,
     getCompany,
     paginationLaunches,
-    paginationLaunchpads
+    paginationLaunchpads,
+    paginationPayloads
 } from "./modulesComponents/pagination.js";
 
 let footerSelect = async(e, id)=>{
@@ -101,4 +102,12 @@ launchpads.addEventListener("click", async(e)=>{
     paginacion.append(await paginationLaunchpads())
 })
 
+
+let Payloads = document.querySelector("#payloads")
+Payloads.addEventListener("click", async(e)=>{
+    await footerSelect(e, Payloads)
+    let paginacion = document.querySelector("#paginacion");
+    paginacion.innerHTML = ""
+    paginacion.append(await paginationPayloads())
+})
 rocket.click();
