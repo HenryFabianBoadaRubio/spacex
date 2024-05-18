@@ -17,7 +17,10 @@ import{
 
 import { 
     informRocketEngineThrustSeaLevel, 
-    informRocketEngineThrustVacuum
+    informRocketEngineThrustVacuum,
+    sucessRateRocket,
+    
+
 } from "./inform.js";
 import { 
     imageRockets 
@@ -32,7 +35,7 @@ import {
 } from "../modulesComponents/progressBar.js";
 ///
 import { 
-    getAllCapsules, getAllCapsulesId 
+    getAllCapsules, getAllCapsulesId, informationOfTheCapsules 
 } from "../modules/capsules.js";
 
 import {
@@ -166,6 +169,9 @@ export const clear = async()=>{
     let information__2 = document.querySelector("#information__2")
     information__2.innerHTML = ``;
 
+    let x = document.querySelector("#sucess_rate2")
+    x.innerHTML = ""
+
 }
 
 const getRocketsId = async(e)=>{
@@ -187,6 +193,7 @@ const getRocketsId = async(e)=>{
 
     await informRocketEngineThrustSeaLevel(Rocket.engines.thrust_sea_level);
     await informRocketEngineThrustVacuum(Rocket.engines.thrust_vacuum);
+    await sucessRateRocket(Rocket.success_rate_pct)
     await imageRockets(Rocket.flickr_images);
 
     await tableRocketColum1(Rocket)
@@ -228,6 +235,7 @@ export const paginationRockets = async()=>{
 }
 
 const getCapsulesId = async(e)=>{
+
     e.preventDefault();
     if(e.target.dataset.page){
         let paginacion = document.querySelector("#paginacion");
@@ -241,7 +249,10 @@ const getCapsulesId = async(e)=>{
     e.target.classList.add('activo');
 
     let Capsule = await getAllCapsulesId(e.target.id);
+    await clear()
     await nameRockets(Capsule.serial)
+
+    await informationOfTheCapsules(Capsule)
 
     // let Rocket = await getAllRocketsId(e.target.id);
     // console.log(Rocket);
@@ -704,6 +715,7 @@ export const paginationLaunches = async(page=1, limit=4)=>{
 
 //modulo launchpads
 const getLaunchpadsId = async(e)=>{
+    await clear();
     e.preventDefault();
     if(e.target.dataset.page){
         let paginacion = document.querySelector("#paginacion");

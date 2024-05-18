@@ -39,6 +39,7 @@ rocket.addEventListener("click", async(e)=>{
 } )
 
 let capsules = document.querySelector("#capsules")
+
 capsules.addEventListener("click", async(e)=>{
     await footerSelect(e, capsules)
     let paginacion = document.querySelector("#paginacion");

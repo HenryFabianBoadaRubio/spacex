@@ -4,8 +4,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-
-    font-family: "Roboto-Regular";
+ font-family: Orbitron;
+    /* font-family: "Roboto-Regular"; */
 }
 
 body {
@@ -346,10 +346,10 @@ body {
 
 .footer {
     /* background: coral; */
+    width: 110%;
     grid-area: section__footer;
-    display: grid;
-    grid-template-columns: 1fr 8fr 1fr;
-    grid-template-areas: ". footer__menu .";
+    margin-left: -2rem;
+    margin-top: 1.1rem;   
 }
 
 .footer ul {
@@ -360,7 +360,14 @@ body {
     align-items: center;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
+    /* background: coral; */
+
 }
+.footer ul i:hover{
+    scale: 1.5;
+    color: orange;
+}
+
 .footer ul::after{
     content: "";
     position: relative;
@@ -502,11 +509,18 @@ progress[value]::-moz-progress-bar {
 
 
 /**estilo web */
+.description__container__box1 img{
+    margin-left: 2rem;
+   
+   
+}
 .box1__container{
     display: flex;
     flex-direction: column;
     color: white;
     height: 25rem;
+    margin-left: 2rem;
+    
     /* border: 1px solid red; */
     line-height: 2rem;
     padding: 0.3rem;
@@ -515,6 +529,7 @@ progress[value]::-moz-progress-bar {
     display: flex;
     /* align-items: center; */
     justify-content: center;
+    font-family: Orbitron;
 }
 
 .alien{
@@ -522,13 +537,13 @@ progress[value]::-moz-progress-bar {
     position: absolute;
     /* border: 1px solid red; */
     margin-right: 50rem;
-    margin-left: 47rem;
+    margin-left: 50rem;
 }
 
 /*ICONOS DEL FOOTER */
 
 a i {
     font-size: 32px; /* Ajusta este valor según el tamaño deseado */
-    color: rgb(202, 49, 49);
+    color: rgb(22, 110, 192);
 }
 
