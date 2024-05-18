@@ -1,4 +1,4 @@
-export const getAllCapsules = async (page,limit)=>{
+export const getAllLaunches = async (page,limit)=>{
     let config = {
         headers:{
             "content-type": "application/json"
@@ -11,13 +11,14 @@ export const getAllCapsules = async (page,limit)=>{
             }
         })
     }
-    let res = await fetch("https://api.spacexdata.com/v4/capsules/query", config)
+    let res = await fetch("https://api.spacexdata.com/v4/launches/query", config)
     let data = await res.json();
     console.log(data);
     return data;
 }
-export const getAllCapsulesId = async (capsulesId)=>{
-    let res = await fetch(`https://api.spacexdata.com/v4/capsules/${capsulesId}`)
+
+export const getAllLaunchesId = async (launchesId)=>{
+    let res = await fetch(`https://api.spacexdata.com/v4/launches/${launchesId}`)
     let data = await res.json();
     return data;
 }
