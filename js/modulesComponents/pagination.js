@@ -80,7 +80,10 @@ import {
     getAllPayloadsId
 } from "../modules/payloads.js"
 
-
+import{
+    getAllRoadster,
+    getAllRoadsterId
+} from "../modules/roadster.js"
 
 
 
@@ -818,3 +821,15 @@ export const paginationPayloads = async(page=1, limit=4)=>{
     // </div>
     return div;
 }
+
+
+
+
+//modulo Roadster
+
+export const getRoadster = async () => {
+    let res = await fetch("https://api.spacexdata.com/v4/roadster");
+    let data = await res.json();
+    return data;
+  };
+
