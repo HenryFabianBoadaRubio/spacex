@@ -48,3 +48,8 @@ export const nameRoadster = async(name)=>{
     header__title.innerHTML = "";
     header__title.textContent = name;
 }
+export const namePayloads = async(name)=>{
+    let header__title = document.querySelector("#header__title");
+    header__title.innerHTML = "";
+    header__title.textContent = name;
+}

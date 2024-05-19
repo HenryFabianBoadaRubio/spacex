@@ -11,7 +11,8 @@ import {
     nameLandspads,
     nameLaunches,
     nameLaunchpads,
-    nameRoadster
+    nameRoadster,
+    namePayloads
 } from "./title.js";
 
 import { 
@@ -97,7 +98,8 @@ import {
 
 import {
     getAllPayloads,
-    getAllPayloadsId
+    getAllPayloadsId,
+    informationOfPayloads
 } from "../modules/payloads.js"
 
 import{
@@ -840,6 +842,9 @@ const getPayloadsId = async(e)=>{
 
     let payloads = await getAllPayloadsId(e.target.id);
     console.log(payloads);
+    await clear()
+    await namePayloads(payloads.name)
+    await informationOfPayloads (payloads)
 
     // await informationRockets(Rocket.country, Rocket.description)
     
