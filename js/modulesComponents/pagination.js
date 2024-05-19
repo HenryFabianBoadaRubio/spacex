@@ -9,7 +9,9 @@ import {
     nameDragons,
     nameHistory,
     nameLandspads,
-    nameLaunches
+    nameLaunches,
+    nameLaunchpads,
+    nameRoadster
 } from "./title.js";
 
 import { 
@@ -89,7 +91,8 @@ import{
 
 import {
     getAllLaunchpads,
-    getAllLaunchpadsId
+    getAllLaunchpadsId,
+    informationOfLaunchpads
 } from "../modules/launchpads.js"
 
 import {
@@ -98,8 +101,8 @@ import {
 } from "../modules/payloads.js"
 
 import{
-    getAllRoadster,
-    getAllRoadsterId
+    getRoadsterFetch,
+    informationOfRoadster
 } from "../modules/roadster.js"
   
 
@@ -769,7 +772,9 @@ const getLaunchpadsId = async(e)=>{
 
     let launchpads = await getAllLaunchpadsId(e.target.id);
     console.log(launchpads);
-
+    await clear()
+    await nameLaunchpads(launchpads.full_name)
+    await informationOfLaunchpads(launchpads)
     // await informationRockets(Rocket.country, Rocket.description)
     
 }
@@ -889,9 +894,11 @@ export const paginationPayloads = async(page=1, limit=4)=>{
 //modulo Roadster
 
 export const getRoadster = async () => {
-    let res = await fetch("https://api.spacexdata.com/v4/roadster");
-    let data = await res.json();
-    return data;
+    let roadster = await getRoadsterFetch();
+    await clear()
+    await nameRoadster(roadster.name)
+    await informationOfRoadster (roadster)
+    
   };
 
 //modulo Ships

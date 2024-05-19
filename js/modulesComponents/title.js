@@ -37,3 +37,14 @@ export const nameLaunches = async(name)=>{
     header__title.innerHTML = "";
     header__title.textContent = name;
 }
+export const nameLaunchpads = async(full_name)=>{
+    let header__title = document.querySelector("#header__title");
+    header__title.innerHTML = "";
+    header__title.textContent = full_name;
+}
+
+export const nameRoadster = async(name)=>{
+    let header__title = document.querySelector("#header__title");
+    header__title.innerHTML = "";
+    header__title.textContent = name;
+}
