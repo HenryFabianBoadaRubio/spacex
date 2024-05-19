@@ -100,4 +100,12 @@ export const informationOfShips = async (Ships) =>{
     <img style="height: 300px; position: absolute; margin-left: 4rem;" src="${Ships.image}" referrerpolicy="no-referrer" alt="">
 
 `
+let centerimgLef= document.querySelector("#information__table__1")
+            centerimgLef.innerHTML = /*html*/ `
+        
+        
+            <img id="galax" style="height: 290px; position: absolute; margin-left:2rem" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNTA0NW11eGRsODRtMzBzeHlwbWFoenAxcGxtMnZ1eWowbms3M2RhMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/gkgwQkzP3lN5u/giphy.gif" alt="">
+           
+        
+            `
  }

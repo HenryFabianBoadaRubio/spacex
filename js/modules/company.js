@@ -219,5 +219,13 @@ centertopright.innerHTML = /*html*/ `
     </tbody>
 </table>
 `
+let centerimgLeftR= document.querySelector("#section__image")
+            centerimgLeftR.innerHTML = /*html*/ `
+        
+        
+            <img id="galax" style="height: 210px; position: absolute; margin-left: 2rem;" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXZqZGtoa3Q0a2hseGVha3A4Y3dsdjlveTd2cmVja3ptdmF5bHA5ZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TEuthoLlrKREs/giphy.gif" alt="">
+           
+        
+            `
 }
 

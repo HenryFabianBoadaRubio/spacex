@@ -151,4 +151,12 @@ centerLandspadsright.innerHTML = /*html*/ `
         </tbody>
     </table>
     `
+    let centerimgLeftRrr= document.querySelector("#section__image")
+            centerimgLeftRrr.innerHTML = /*html*/ `
+        
+        
+            <img id="galax" style="height: 280px; position: absolute; margin-left: 8rem;" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExeDh2a281aGM4NWpsenpvcDVmYmw5NmVvaXVoenRnM3pqa3FnMmhuYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/hvp4bP1xI01E65n2oc/giphy.gif" alt="">
+           
+        
+            `
     }

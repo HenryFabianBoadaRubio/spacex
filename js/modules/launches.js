@@ -135,4 +135,20 @@ centerLaunchesright.innerHTML = /*html*/ `
         </tbody>
     </table>
     `
+    let centerimgLeftRrr= document.querySelector("#sucess_rate")
+            centerimgLeftRrr.innerHTML = /*html*/ `
+        
+        
+            <img id="galax" style="height: 220px; position: absolute; margin-left: 4rem;" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMHk5YXBmcGZiMXllNDNwMGplb3F6bG9oaXM1NXkxcmN0andrcTR6dyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/YP258EkezKv5RSPGRI/giphy.gif" alt="">
+           
+        
+            `
+                let centerimgLeftR= document.querySelector("#sucess_rate2")
+                centerimgLeftR.innerHTML = /*html*/ `
+            
+            
+                <img id="galax" style="height: 220px; position: absolute; margin-left: 4rem;" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExaW5obDdsdDVramh1ZW1qaDZ6NW1uem5jOTJhc3A2N242bTEzNG0zeiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/S99cgkURVO62qemEKM/giphy.gif" alt="">
+            
+            
+                `
     }

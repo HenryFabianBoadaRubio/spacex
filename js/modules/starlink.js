@@ -170,4 +170,20 @@ centerStarlinkRight.innerHTML = /*html*/ `
         </tbody>
     </table>
     `
+    let centerimgLefR= document.querySelector("#sucess_rate")
+            centerimgLefR.innerHTML = /*html*/ `
+        
+        
+            <img id="galax" style="height: 400px; position: absolute; margin-left: 4rem;" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXd2ZXJuMHNuZ29ta3pwa2llM2xpeTJzMjg2dmUxbzFjejJmNGZjZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/W69xBwRM9fhh30eyMw/giphy.gif" alt="">
+           
+        
+            `
+            let centerimgLef= document.querySelector("#sucess_rate2")
+            centerimgLef.innerHTML = /*html*/ `
+        
+        
+            <img id="galax" style="height: 520px; position: absolute;" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDFwcnoxaWoyNHJ3cDk2eHpseWRpZ2VheWQ0djZybjRjaHhqbnViYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xiN0BXMETVsx0AxTXt/giphy.gif" alt="">
+           
+        
+            `
     }
