@@ -536,9 +536,12 @@ progress[value]::-moz-progress-bar {
 .alien{
     display: flex;
     position: absolute;
+    inset: 0;
+    margin: auto;
+    margin-bottom: 25rem;
+    right: 1rem;
     /* border: 1px solid red; */
-    margin-right: 50rem;
-    margin-left: 50rem;
+    
 }
 
 /*ICONOS DEL FOOTER */
@@ -548,5 +551,6 @@ a i {
     color: rgb(22, 110, 192);
 
 }
+
 
 

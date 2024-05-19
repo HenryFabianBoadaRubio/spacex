@@ -204,5 +204,5 @@ centerDragonsright.innerHTML = /*html*/ `
     </style>
 
 
-            <img style="height: 350px; position: absolute" src="${Dragons.flickr_images[2]}" referrerpolicy="no-referrer" alt="">`
+            <img style="height: 350px; position: absolute; left:7.5rem" src="${Dragons.flickr_images[2]}" referrerpolicy="no-referrer" alt="">`
 }
