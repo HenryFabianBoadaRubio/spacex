@@ -12,7 +12,8 @@ import {
     nameLaunches,
     nameLaunchpads,
     nameRoadster,
-    namePayloads
+    namePayloads,
+    nameShips
 } from "./title.js";
 
 import { 
@@ -110,7 +111,8 @@ import{
 
 import {
     getAllShips,
-    getAllShipsId
+    getAllShipsId,
+    informationOfShips
 } from "../modules/ships.js"
 
 
@@ -921,9 +923,11 @@ const getShipsId = async(e)=>{
     e.target.classList.add('activo');
     
 
-    let payloads = await getAllShipsId(e.target.id);
+    let ships = await getAllShipsId(e.target.id);
     console.log(payloads);
-
+    await clear()
+    await nameShips(ships.name)
+    await informationOfShips (ships)
     // await informationRockets(Rocket.country, Rocket.description)
     
 }
@@ -973,7 +977,7 @@ export const paginationShips = async(page=1, limit=4)=>{
 
 
 
-//modulo Ships
+//modulo Starlinks
 const getStarlinkId = async(e)=>{
     e.preventDefault();
     if(e.target.dataset.page){
@@ -990,7 +994,6 @@ const getStarlinkId = async(e)=>{
 
     let starlink = await getAllStarlinkId(e.target.id);
     console.log(starlink);
-
     // await informationRockets(Rocket.country, Rocket.description)
     
 }
