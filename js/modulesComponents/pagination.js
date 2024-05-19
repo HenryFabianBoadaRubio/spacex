@@ -8,7 +8,8 @@ import {
     nameCrew,
     nameDragons,
     nameHistory,
-    nameLandspads
+    nameLandspads,
+    nameLaunches
 } from "./title.js";
 
 import { 
@@ -82,7 +83,8 @@ import {
 
 import{
     getAllLaunches,
-    getAllLaunchesId
+    getAllLaunchesId,
+    informationOfLaunches
 } from "../modules/launches.js"
 
 import {
@@ -699,7 +701,9 @@ const getLaunchesId = async(e)=>{
 
     let launches = await getAllLaunchesId(e.target.id);
     console.log(launches);
-
+    await clear()
+    await nameLaunches(launches.name)
+    await informationOfLaunches (launches)
     // await informationRockets(Rocket.country, Rocket.description)
     
 }
