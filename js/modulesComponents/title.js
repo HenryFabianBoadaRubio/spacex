@@ -9,3 +9,9 @@ export const nameCores = async(serial)=>{
     header__title.innerHTML = "";
     header__title.textContent = serial;
 }
+
+export const nameCrew = async(name)=>{
+    let header__title = document.querySelector("#header__title");
+    header__title.innerHTML = "";
+    header__title.textContent = name;
+}
