@@ -779,7 +779,7 @@ const getLaunchpadsId = async(e)=>{
     let launchpads = await getAllLaunchpadsId(e.target.id);
     console.log(launchpads);
     await clear()
-    await nameLaunchpads(launchpads.full_name)
+    await nameLaunchpads(launchpads.name)
     await informationOfLaunchpads(launchpads)
     // await informationRockets(Rocket.country, Rocket.description)
     
