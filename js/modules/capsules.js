@@ -131,5 +131,29 @@ export const informationOfTheCapsules = async (Capsule) =>{
 
 
     `
+    let centerimgLeft = document.querySelector("#description__item")
+    centerimgLeft.innerHTML = /*html*/ `
+
+
+    <img id="galax" style="height: 350px; position: absolute; margin-left: 2rem;" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzRqZmMyc2FsMmhseG53Y3R5NzZvMGZhOWdnZXliaHdueHI5dGI5dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1Qkd3km5eM6Yw/giphy.webp" alt="">
+   
+
+    `
+    let centerimgLeftR = document.querySelector("#section__image")
+    centerimgLeftR.innerHTML = /*html*/ `
+
+
+    <img id="galax" style="height: 250px; position: absolute; margin-left: 7rem;" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExM212cTB6d3M1amd1M2NoM3d0cHNsZzN6ZWhod2picGZsNXdrMGc0ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/QLcCBdBemDIqpbK6jA/giphy.gif" alt="">
+   
+
+    `
+    let centerimgLeftRR= document.querySelector("#information__2")
+    centerimgLeftRR.innerHTML = /*html*/ `
+
+
+    <img id="galax" style="height: 400px; position: absolute; margin-right: 1rem;" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExaWt1aGxxeHgxZTZqYTRrdW4yMW10dnlmN2Nod3kzZ2R1Njd2cXNvcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/b85mPT4Usz7fq/giphy.gif" alt="">
+   
+
+    `
 
 }
