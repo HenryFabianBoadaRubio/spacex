@@ -9,9 +9,9 @@
 }
 
 body {
-    background: url(https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZzVqY243azNmMzVsdWg2bnh0emlpb3JxbXJqcXk3YXg1M2tpNnhlYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9bTjZrytydVRK/giphy.gif);
+    background: url(https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmN2aWE4ZzV3MnNweXVtMzljbHZya29yZzBpYnhsZDg1NjE4OWVwbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l3q2sLRa7XYfVRq8w/giphy.gif);
     /* background-repeat: no-repeat; */
-    background-size:cover;
+    background-size:contain;
     /* background: linear-gradient(var(--color--one), var(--color--one--rgba)); */
 }
 
