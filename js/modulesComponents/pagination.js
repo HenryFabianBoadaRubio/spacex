@@ -13,7 +13,8 @@ import {
     nameLaunchpads,
     nameRoadster,
     namePayloads,
-    nameShips
+    nameShips,
+    nameStarlink
 } from "./title.js";
 
 import { 
@@ -118,7 +119,8 @@ import {
 
 import {
     getAllStarlink,
-    getAllStarlinkId
+    getAllStarlinkId,
+    informationOfStarlink
 } from "../modules/starlink.js"
 
 
@@ -994,6 +996,9 @@ const getStarlinkId = async(e)=>{
 
     let starlink = await getAllStarlinkId(e.target.id);
     console.log(starlink);
+    await clear()
+    await nameStarlink(starlink.spaceTrack.OBJECT_NAME)
+    await informationOfStarlink (starlink)
     // await informationRockets(Rocket.country, Rocket.description)
     
 }

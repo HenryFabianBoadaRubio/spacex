@@ -549,6 +549,8 @@ progress[value]::-moz-progress-bar {
 a i {
     font-size: 32px; /* Ajusta este valor según el tamaño deseado */
     color: rgb(22, 110, 192);
+
+
 }
 
 
