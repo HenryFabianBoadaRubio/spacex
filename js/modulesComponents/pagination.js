@@ -6,7 +6,8 @@ import {
     nameRockets ,
     nameCores,
     nameCrew,
-    nameDragons
+    nameDragons,
+    nameHistory
 } from "./title.js";
 
 import { 
@@ -68,7 +69,8 @@ import{
 
 import{
     getAllHistory,
-    getAllHistoryId
+    getAllHistoryId,
+    informationOfHistory
 } from "../modules/history.js"
 import {
      getAllLandspads,
@@ -555,6 +557,10 @@ const getHistoryId = async(e)=>{
 
     let history = await getAllHistoryId(e.target.id);
     console.log(history);
+    await clear()
+    await nameHistory(history.title)
+
+    await informationOfHistory(history)
 
     // await informationRockets(Rocket.country, Rocket.description)
     

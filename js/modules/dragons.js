@@ -180,6 +180,8 @@ centerDragonsright.innerHTML = /*html*/ `
             padding: 0;
         }
         table {
+                 margin-left: 2rem;
+
             width: 80%;
             border-collapse: collapse;
             border: 2px solid #1f6feb;
