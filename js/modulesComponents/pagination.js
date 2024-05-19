@@ -40,8 +40,9 @@ import {
 } from "../modules/capsules.js";
 
 import {
-    getAllCompany,
-    getAllCompanyId
+   
+    getCompanyFetch,
+    informationOfCompany
 } from "../modules/company.js"
 
 import{
@@ -174,6 +175,9 @@ export const clear = async()=>{
 
     let x = document.querySelector("#sucess_rate2")
     x.innerHTML = ""
+
+    let y = document.querySelector("#sucess_rate")
+    y.innerHTML = ""
 
 }
 
@@ -312,9 +316,12 @@ export const paginationCapsules = async(page=1, limit=4)=>{
 
 //modulo company 
 export const getCompany = async () => {
-    let res = await fetch("https://api.spacexdata.com/v4/company");
-    let data = await res.json();
-    return data;
+    let Company = await getCompanyFetch()
+    await clear()
+    await nameRockets(Company.name)
+
+    await informationOfCompany(Company)
+
   };
 
 
