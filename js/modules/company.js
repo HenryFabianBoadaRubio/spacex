@@ -227,5 +227,21 @@ let centerimgLeftR= document.querySelector("#section__image")
            
         
             `
+            let centerimgLeftRr= document.querySelector("#description__item")
+            centerimgLeftRr.innerHTML = /*html*/ `
+        
+        
+            <img id="galax" style="height: 210px; position: absolute; margin-left: 2rem;" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExeTc3eXVvY3A3Yjl6YjRqMTE4aGN4aDd4cW5tdmJzMmVob2R1d3h6diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/yDxEtkDK1cUh5l5FQK/giphy.gif" alt="">
+           
+        
+            `
+            let centerimgLeftRrr= document.querySelector("#information__2")
+            centerimgLeftRrr.innerHTML = /*html*/ `
+        
+        
+            <img id="galax" style="height: 160px; position: absolute; margin-right: 5rem;" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTVtYnY4Y3QzaHg1ejQ5OHJzZ2V3bnYydG5pdzhpajJmd3NoZmFieSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/2bvoZ9luTg2kM/giphy.gif" alt="">
+           
+        
+            `
 }
 
